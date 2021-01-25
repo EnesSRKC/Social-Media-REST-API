@@ -1,5 +1,11 @@
-# Welcome to GitHub Desktop!
+#Social Media REST API
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+! API Node.js kullanarak yazılmıştır. Bilgisayarınızda çalıştırmak için Node.js'in kurulmuş olması gerekmektedir. Kurulumu https://nodejs.org/en/ sitesinden yapabilirsiniz.
+
+API'yi çalıştırmak için;
+1. Depoyu bilgisayarınıza indirin.
+2. Komut satırında 'backend' klasörüne gidin.
+3. Komut satırına 'npm install' yazarak proje bağımlılıklarını yükleyin.
+4. 'npm install nodemon' yazarak gerekli kütüphaneyi yükleyin.
+5. 'nodemon server.js' yazarak programı çalıştırabilirsiniz.
