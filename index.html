@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      type="image/png"
+      rel="icon"
+      sizes="24x24"
+      href="public/icon/icons8-api-24.png"
+    />
+    <link type="text/css" rel="stylesheet" href="public/css/style.css" />
+    <meta
+      name="author"
+      content="Enes Sirkecioğlu - enes.sirkecioglu@ogr.sakarya.edu.tr"
+    />
+
+    <title>Social Media API</title>
+  </head>
+  <body>
+    <main>
+      <div id="page">
+        <div id="page-header-area">
+          <h1 id="page-header-text">SOCIAL MEDIA API Documentation</h1>
+          <div class="divider"></div>
+          <p id="page-header-description">
+            The social media REST Api contains
+            <strong>GET, POST, PATCH, DELETE</strong> requests but if you don't
+            sign in it just allows you to GET requests.
+          </p>
+        </div>
+        <div id="page-posts-area">
+          <h2 class="page-resource-text">Posts</h2>
+          <p class="page-resource-description">
+            The Posts resource represents all shared posts via registered users.
+          </p>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/posts</div>
+            <p class="request-description">
+              Returns a list of all current posts
+            </p>
+            <!-- <div class="request-examle">
+                        <pre style="word-wrap: break-word; white-space: pre-wrap;">
+                            {
+                                "count": 1,
+                                "posts": [
+                                    {
+                                        "_id": "5f8dff3021b81930745fc803",
+                                        "content": "Deneme post 1",
+                                        "author": {
+                                            "_id": "5f8c7ac2afaec80ef05c1d32",
+                                            "username": "k.ruiz25",
+                                            "name": "Katya",
+                                            "surname": "Ruiz"
+                                        }
+                                    }
+                                ]
+                            }
+                        </pre>
+                        
+                    </div> -->
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/posts/:postId</div>
+            <p class="request-description">
+              Returns a single post record belonging to postId.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">POST:</span>
+            <div class="request">/posts</div>
+            <p class="request-description">
+              Used to create a new post .To send this request, you must be
+              logged in and send it with the token in the header of the request.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">PATCH:</span>
+            <div class="request">/posts/:postId</div>
+            <p class="request-description">
+              This request will add comments or edit a post depending on the
+              body fields of the request what you send.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">DELETE:</span>
+            <div class="request">/posts/:postId</div>
+            <p class="request-description">
+              Deletes the post belonging the postId.
+            </p>
+          </div>
+
+          <!-- <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/posts/{_id}</div>
+            <div class="request-examle">
+              <pre style="word-wrap: break-word; white-space: pre-wrap">
+                            {
+                                "_id": "5f8dff3021b81930745fc803",
+                                "content": "Deneme post 1",
+                                "author": {
+                                    "_id": "5f8c7ac2afaec80ef05c1d32",
+                                    "username": "k.ruiz25",
+                                    "name": "Katya",
+                                    "surname": "Ruiz"
+                                }
+                            }
+                        </pre
+              >
+            </div>
+            <p class="request-description">Returns a Post Instance</p>
+          </div> -->
+        </div>
+
+        <div id="page-users-area">
+          <h2 class="page-resource-text">Login</h2>
+          <p class="page-resource-description">
+            The Login routes includes registration and login proccess.
+          </p>
+
+          <div class="request-area">
+            <span class="request-name">POST:</span>
+            <div class="request">/signup</div>
+            <p class="request-description">
+              Submitted to create a user record. When the record is success, a
+              new user record is created
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">POST:</span>
+            <div class="request">/signin</div>
+            <p class="request-description">Used to login.</p>
+          </div>
+        </div>
+
+        <div id="page-users-area">
+          <h2 class="page-resource-text">Users</h2>
+          <p class="page-resource-description">
+            The Users resource represents all current users via registered
+            users.
+          </p>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/users</div>
+            <p class="request-description">
+              Returns a list of all current registered users.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/users/search?q={username}</div>
+            <p class="request-description">
+              Returns users matching the parameter sent by query.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/users/:username</div>
+            <p class="request-description">
+              Returns the user belonging to username sent as parameter.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">PATCH:</span>
+            <div class="request">/users/:userId</div>
+            <p class="request-description">
+              Updates the user according to the body fields of the sent request.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">DELETE:</span>
+            <div class="request">/users/:userId</div>
+            <p class="request-description">
+              Deletes the user belonging to the userId sent as parameter.
+            </p>
+          </div>
+        </div>
+
+        <div id="page-users-area">
+          <h2 class="page-resource-text">Messages</h2>
+          <p class="page-resource-description">
+            The Messages resource represents all shared messages.
+          </p>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/messages</div>
+            <p class="request-description">Used to get all messages.</p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/messages/:username</div>
+            <p class="request-description">
+              Returns all messages belonging to the user.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">POST:</span>
+            <div class="request">/messages</div>
+            <p class="request-description">Used to create a new chat.</p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">PATCH:</span>
+            <div class="request">/messages/:messageId</div>
+            <p class="request-description">
+              It is used to add a new message to the chat belonging to messageId
+              given as parameter..
+            </p>
+          </div>
+        </div>
+
+        <div id="page-users-area">
+          <h2 class="page-resource-text">Organizations</h2>
+          <p class="page-resource-description">
+            The Organizations resource represents all shared organizations.
+          </p>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/organizations</div>
+            <p class="request-description">Used to get all organizations.</p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">GET:</span>
+            <div class="request">/organizations/:userId</div>
+            <p class="request-description">
+              Returns all organizations where the user of the userId given as
+              parameter is registered.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">PATCH:</span>
+            <div class="request">/organizations/:orgId</div>
+            <p class="request-description">
+              It is used to add participants and announcements to the
+              organization belonging to the orgId given as parameter.
+            </p>
+          </div>
+
+          <div class="request-area">
+            <span class="request-name">POST:</span>
+            <div class="request">/organizations</div>
+            <p class="request-description">
+              Used to create a new organization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
