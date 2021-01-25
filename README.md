@@ -1,5 +1,5 @@
 # Social Media REST API
-
+Bu linkten de ulaşabilirsiniz --> (https://socialmediaapinodejs.herokuapp.com/)
 
 ! API Node.js kullanarak yazılmıştır. Bilgisayarınızda çalıştırmak için Node.js'in kurulmuş olması gerekmektedir. Kurulumu https://nodejs.org/en/ sitesinden yapabilirsiniz.
 
