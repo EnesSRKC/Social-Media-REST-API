@@ -1,4 +1,4 @@
-#Social Media REST API
+# Social Media REST API
 
 
 ! API Node.js kullanarak yazılmıştır. Bilgisayarınızda çalıştırmak için Node.js'in kurulmuş olması gerekmektedir. Kurulumu https://nodejs.org/en/ sitesinden yapabilirsiniz.
